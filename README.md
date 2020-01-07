@@ -12,12 +12,12 @@
 
 You will need to have access to **Swift 5.1** at the very least to use this package, as well as **XCode 11**.
 
-The [Swift Package Manager](https://swift.org/package-manager/) automates the distribution of Swift code. To use `ffn-dl` with SPM, add a dependency to your `Package.swift` file:
+The [Swift Package Manager](https://swift.org/package-manager/) automates the distribution of Swift code. To use `ffn-save` with SPM, add a dependency to your `Package.swift` file:
 
 ```swift
 let package = Package(
   dependencies: [
-    .package(url: "https://github.com/poliorcetics/ffn-dl.git", ...)
+    .package(url: "https://github.com/poliorcetics/ffn-save.git", ...)
     ]
 )
 ```
