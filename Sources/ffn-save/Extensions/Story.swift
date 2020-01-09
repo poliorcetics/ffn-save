@@ -9,15 +9,16 @@ import Foundation
 import ffn_dl
 
 internal extension Story {
+  private var transformedTitle: String {
+    title.lowercased().replacingOccurrences(of: #"\W+"#, with: "-", options: .regularExpression)
+  }
+
   var dir: String {
-    "\(Self.site.dir)/\(title.lowercased().replacingOccurrences(of: #"\W+"#, with: "-", options: .regularExpression))"
+    "\(Self.site.dir)/\(transformedTitle)"
   }
 
   /// Name of the HTML file containing the informations about the story.
   var HTMLInformationsFilename: String {
-    let filename = title
-      .lowercased()
-      .replacingOccurrences(of: #"\W+"#, with: "-", options: .regularExpression)
-    return "\(filename)_infos.html"
+    "\(transformedTitle)_infos.html"
   }
 }
