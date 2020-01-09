@@ -16,23 +16,6 @@ fileprivate enum MockSite: Site {
   static let regex = try! NSRegularExpression(pattern: "https://(m|www).fanfiction.net(/.*)?")
 }
 
-fileprivate struct MockChapterBuilder {
-  static let url = URL(string: "https://www.fanfiction.net/s/4951074/1/Harry-s-Little-Army-of-Psychos")!
-  static let title = "Test Chapter Title"
-  static let content = "Test chapter content"
-  static let lastUpdate = Date()
-
-  static let finder = Chapter.Finder(
-    findURL: { _ in url },
-    findTitle: { _ in title },
-    findContent: { _ in content }
-  )
-
-  static func build() -> Chapter {
-    Chapter(from: url, withFinder: finder)!
-  }
-}
-
 fileprivate struct MockAuthorBuilder {
   static let url = URL(string: "https://www.fanfiction.net/u/1122504/RuneWitchSakura")!
   static let name = "RuneWitchSakura"
