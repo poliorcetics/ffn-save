@@ -98,4 +98,8 @@ final class StoryTests: XCTestCase {
   func testDir() {
     XCTAssertEqual(MockStory().dir, "fanfiction-net/harry-s-little-army-of-psychos")
   }
+
+  func testHTMLInformationsFilename() {
+    XCTAssertEqual(MockStory().HTMLInformationsFilename, "harry-s-little-army-of-psychos_infos.html")
+  }
 }
