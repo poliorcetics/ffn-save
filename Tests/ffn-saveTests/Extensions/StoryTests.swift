@@ -79,7 +79,7 @@ fileprivate struct MockStory: Story {
 
 final class StoryTests: XCTestCase {
   func testDir() {
-    XCTAssertEqual(MockStory().dir, "fanfiction-net/harry-s-little-army-of-psychos")
+    XCTAssertEqual(MockStory().dir, "fanfiction-net/harry-s-little-army-of-psychos_runewitchsakura")
   }
 
   func testHTMLInformationsFilename() {

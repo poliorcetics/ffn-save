@@ -15,7 +15,8 @@ internal extension Story {
 
   /// Directory in which to save the story (relative to an unspecified working directory)
   var dir: String {
-    "\(Self.site.dir)/\(transformedTitle)"
+    let author = self.author.name.lowercased().replacingOccurrences(of: #"\W+"#, with: "-", options: .regularExpression)
+    return "\(Self.site.dir)/\(transformedTitle)_\(author)"
   }
 
   /// Name of the HTML file containing the informations about the story.
