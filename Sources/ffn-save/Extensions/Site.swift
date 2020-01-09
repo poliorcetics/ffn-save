@@ -13,4 +13,9 @@ internal extension Site {
   static var dir: String {
     name.lowercased().replacingOccurrences(of: #"\W+"#, with: "-", options: .regularExpression)
   }
+
+  /// Name of the HTML file containing the list of stories from the site and the statistics.
+  static var HTMLInformationsFilename: String {
+    "stats_\(dir).html"
+  }
 }

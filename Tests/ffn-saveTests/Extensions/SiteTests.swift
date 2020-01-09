@@ -20,4 +20,8 @@ final class SiteTests: XCTestCase {
   func testDir() {
     XCTAssertEqual(MockSite.dir, "fanfiction-net")
   }
+
+  func testHTMLInformationsFilename() {
+    XCTAssertEqual(MockSite.HTMLInformationsFilename, "stats_fanfiction-net.html")
+  }
 }
